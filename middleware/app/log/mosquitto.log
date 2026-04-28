@@ -1,0 +1,365 @@
+2026-04-28T10:03:26: New connection from 192.168.1.145:42591 on port 1883.
+2026-04-28T10:03:26: New client connected from 192.168.1.145:42591 as hmi_terminal_01 (p4, c1, k60, u'hmi').
+2026-04-28T10:03:26: No will message specified.
+2026-04-28T10:03:26: Sending CONNACK to hmi_terminal_01 (0, 0)
+2026-04-28T10:03:26: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:03:26: 	iot/v1/status/device/+ (QoS 0)
+2026-04-28T10:03:26: hmi_terminal_01 0 iot/v1/status/device/+
+2026-04-28T10:03:26: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:03:26: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:03:26: 	iot/v1/command-result/device/+ (QoS 0)
+2026-04-28T10:03:26: hmi_terminal_01 0 iot/v1/command-result/device/+
+2026-04-28T10:03:26: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:03:26: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:03:26: 	telemetry/plc/+ (QoS 0)
+2026-04-28T10:03:26: hmi_terminal_01 0 telemetry/plc/+
+2026-04-28T10:03:26: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:03:40: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:03:40: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:03:40: New connection from 172.18.0.5:42715 on port 1883.
+2026-04-28T10:03:40: New client connected from 172.18.0.5:42715 as auto-7FA924EE-37B7-A04F-BE81-69BB539C549A (p4, c1, k60, u'gateway').
+2026-04-28T10:03:40: No will message specified.
+2026-04-28T10:03:40: Sending CONNACK to auto-7FA924EE-37B7-A04F-BE81-69BB539C549A (0, 0)
+2026-04-28T10:03:40: Received PUBLISH from auto-7FA924EE-37B7-A04F-BE81-69BB539C549A (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:03:40: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:03:40: Received DISCONNECT from auto-7FA924EE-37B7-A04F-BE81-69BB539C549A
+2026-04-28T10:03:40: Client auto-7FA924EE-37B7-A04F-BE81-69BB539C549A [172.18.0.5:42715] disconnected.
+2026-04-28T10:04:06: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:04:06: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:04:26: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:04:26: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:05:06: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:05:06: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:05:26: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:05:26: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:06:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:06:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:06:26: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:06:26: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:07:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:07:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:07:27: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:07:27: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:07:41: Saving in-memory database to /mosquitto/data//mosquitto.db.
+2026-04-28T10:08:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:08:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:08:25: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:08:25: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:08:25: New connection from 172.18.0.5:50195 on port 1883.
+2026-04-28T10:08:25: New client connected from 172.18.0.5:50195 as auto-21651C80-B387-2AFB-34F0-8137CE5FFCEA (p4, c1, k60, u'gateway').
+2026-04-28T10:08:25: No will message specified.
+2026-04-28T10:08:25: Sending CONNACK to auto-21651C80-B387-2AFB-34F0-8137CE5FFCEA (0, 0)
+2026-04-28T10:08:25: Received PUBLISH from auto-21651C80-B387-2AFB-34F0-8137CE5FFCEA (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:08:25: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:08:25: Received DISCONNECT from auto-21651C80-B387-2AFB-34F0-8137CE5FFCEA
+2026-04-28T10:08:25: Client auto-21651C80-B387-2AFB-34F0-8137CE5FFCEA [172.18.0.5:50195] disconnected.
+2026-04-28T10:08:27: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:08:27: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:08:49: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:08:49: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:08:49: New connection from 172.18.0.5:42259 on port 1883.
+2026-04-28T10:08:49: New client connected from 172.18.0.5:42259 as auto-ACFEE7CE-57D9-AB55-3241-F0DC0E95F437 (p4, c1, k60, u'gateway').
+2026-04-28T10:08:49: No will message specified.
+2026-04-28T10:08:49: Sending CONNACK to auto-ACFEE7CE-57D9-AB55-3241-F0DC0E95F437 (0, 0)
+2026-04-28T10:08:49: Received PUBLISH from auto-ACFEE7CE-57D9-AB55-3241-F0DC0E95F437 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:08:49: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:08:49: Received DISCONNECT from auto-ACFEE7CE-57D9-AB55-3241-F0DC0E95F437
+2026-04-28T10:08:49: Client auto-ACFEE7CE-57D9-AB55-3241-F0DC0E95F437 [172.18.0.5:42259] disconnected.
+2026-04-28T10:08:59: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:08:59: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:08:59: New connection from 172.18.0.5:35951 on port 1883.
+2026-04-28T10:08:59: New client connected from 172.18.0.5:35951 as auto-442669AE-1495-2D2C-423E-51BA5B48A32D (p4, c1, k60, u'gateway').
+2026-04-28T10:08:59: No will message specified.
+2026-04-28T10:08:59: Sending CONNACK to auto-442669AE-1495-2D2C-423E-51BA5B48A32D (0, 0)
+2026-04-28T10:08:59: Received PUBLISH from auto-442669AE-1495-2D2C-423E-51BA5B48A32D (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:08:59: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:08:59: Received DISCONNECT from auto-442669AE-1495-2D2C-423E-51BA5B48A32D
+2026-04-28T10:08:59: Client auto-442669AE-1495-2D2C-423E-51BA5B48A32D [172.18.0.5:35951] disconnected.
+2026-04-28T10:09:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:09:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:09:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:09:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:10:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:10:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:10:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:10:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:11:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:11:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:11:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:11:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:12:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:12:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:12:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:12:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:13:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:13:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:13:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:13:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:14:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:14:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:14:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:14:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:15:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:15:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:15:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:15:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:15:40: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:15:40: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:15:40: New connection from 172.18.0.5:54057 on port 1883.
+2026-04-28T10:15:40: New client connected from 172.18.0.5:54057 as auto-6E30FA79-971C-EB74-09BC-02E545877EB0 (p4, c1, k60, u'gateway').
+2026-04-28T10:15:40: No will message specified.
+2026-04-28T10:15:40: Sending CONNACK to auto-6E30FA79-971C-EB74-09BC-02E545877EB0 (0, 0)
+2026-04-28T10:15:40: Received PUBLISH from auto-6E30FA79-971C-EB74-09BC-02E545877EB0 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:15:40: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:15:40: Received DISCONNECT from auto-6E30FA79-971C-EB74-09BC-02E545877EB0
+2026-04-28T10:15:40: Client auto-6E30FA79-971C-EB74-09BC-02E545877EB0 [172.18.0.5:54057] disconnected.
+2026-04-28T10:15:46: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:15:46: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:15:46: New connection from 172.18.0.5:38189 on port 1883.
+2026-04-28T10:15:46: New client connected from 172.18.0.5:38189 as auto-7F38A6A4-F7E6-3397-AD76-11899D6C0A05 (p4, c1, k60, u'gateway').
+2026-04-28T10:15:46: No will message specified.
+2026-04-28T10:15:46: Sending CONNACK to auto-7F38A6A4-F7E6-3397-AD76-11899D6C0A05 (0, 0)
+2026-04-28T10:15:46: Received PUBLISH from auto-7F38A6A4-F7E6-3397-AD76-11899D6C0A05 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:15:46: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:15:46: Received DISCONNECT from auto-7F38A6A4-F7E6-3397-AD76-11899D6C0A05
+2026-04-28T10:15:46: Client auto-7F38A6A4-F7E6-3397-AD76-11899D6C0A05 [172.18.0.5:38189] disconnected.
+2026-04-28T10:15:52: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:15:52: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:15:53: New connection from 172.18.0.5:57387 on port 1883.
+2026-04-28T10:15:53: New client connected from 172.18.0.5:57387 as auto-106DCAAD-12A3-D81A-9B11-9256A679C36A (p4, c1, k60, u'gateway').
+2026-04-28T10:15:53: No will message specified.
+2026-04-28T10:15:53: Sending CONNACK to auto-106DCAAD-12A3-D81A-9B11-9256A679C36A (0, 0)
+2026-04-28T10:15:53: Received PUBLISH from auto-106DCAAD-12A3-D81A-9B11-9256A679C36A (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:15:53: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:15:53: Received DISCONNECT from auto-106DCAAD-12A3-D81A-9B11-9256A679C36A
+2026-04-28T10:15:53: Client auto-106DCAAD-12A3-D81A-9B11-9256A679C36A [172.18.0.5:57387] disconnected.
+2026-04-28T10:15:56: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:15:56: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:15:56: New connection from 172.18.0.5:39235 on port 1883.
+2026-04-28T10:15:56: New client connected from 172.18.0.5:39235 as auto-23E4BA84-47AE-8B63-5FEC-77B4B9073D22 (p4, c1, k60, u'gateway').
+2026-04-28T10:15:56: No will message specified.
+2026-04-28T10:15:56: Sending CONNACK to auto-23E4BA84-47AE-8B63-5FEC-77B4B9073D22 (0, 0)
+2026-04-28T10:15:56: Received PUBLISH from auto-23E4BA84-47AE-8B63-5FEC-77B4B9073D22 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:15:56: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:15:56: Received DISCONNECT from auto-23E4BA84-47AE-8B63-5FEC-77B4B9073D22
+2026-04-28T10:15:56: Client auto-23E4BA84-47AE-8B63-5FEC-77B4B9073D22 [172.18.0.5:39235] disconnected.
+2026-04-28T10:16:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:16:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:16:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:16:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:17:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:17:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:17:28: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:17:28: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:17:44: Client hmi_terminal_01 [192.168.1.145:42591] disconnected: connection closed by client.
+2026-04-28T10:17:46: New connection from 192.168.1.145:55067 on port 1883.
+2026-04-28T10:17:46: New client connected from 192.168.1.145:55067 as hmi_terminal_01 (p4, c1, k60, u'hmi').
+2026-04-28T10:17:46: No will message specified.
+2026-04-28T10:17:46: Sending CONNACK to hmi_terminal_01 (0, 0)
+2026-04-28T10:17:47: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:17:47: 	iot/v1/status/device/+ (QoS 0)
+2026-04-28T10:17:47: hmi_terminal_01 0 iot/v1/status/device/+
+2026-04-28T10:17:47: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:17:47: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:17:47: 	iot/v1/command-result/device/+ (QoS 0)
+2026-04-28T10:17:47: hmi_terminal_01 0 iot/v1/command-result/device/+
+2026-04-28T10:17:47: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:17:47: Received SUBSCRIBE from hmi_terminal_01
+2026-04-28T10:17:47: 	telemetry/plc/+ (QoS 0)
+2026-04-28T10:17:47: hmi_terminal_01 0 telemetry/plc/+
+2026-04-28T10:17:47: Sending SUBACK to hmi_terminal_01
+2026-04-28T10:18:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:18:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:18:22: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:18:22: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:18:22: New connection from 172.18.0.5:50967 on port 1883.
+2026-04-28T10:18:22: New client connected from 172.18.0.5:50967 as auto-5916FED1-2235-46B7-2962-2518275F2873 (p4, c1, k60, u'gateway').
+2026-04-28T10:18:22: No will message specified.
+2026-04-28T10:18:22: Sending CONNACK to auto-5916FED1-2235-46B7-2962-2518275F2873 (0, 0)
+2026-04-28T10:18:22: Received PUBLISH from auto-5916FED1-2235-46B7-2962-2518275F2873 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:18:22: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:18:22: Received DISCONNECT from auto-5916FED1-2235-46B7-2962-2518275F2873
+2026-04-28T10:18:22: Client auto-5916FED1-2235-46B7-2962-2518275F2873 [172.18.0.5:50967] disconnected.
+2026-04-28T10:18:27: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:27: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:27: New connection from 172.18.0.5:46681 on port 1883.
+2026-04-28T10:18:27: New client connected from 172.18.0.5:46681 as auto-AB5C7E42-583E-D5F6-C89F-F7402D56CCB6 (p4, c1, k60, u'gateway').
+2026-04-28T10:18:27: No will message specified.
+2026-04-28T10:18:27: Sending CONNACK to auto-AB5C7E42-583E-D5F6-C89F-F7402D56CCB6 (0, 0)
+2026-04-28T10:18:27: Received PUBLISH from auto-AB5C7E42-583E-D5F6-C89F-F7402D56CCB6 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:27: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:27: Received DISCONNECT from auto-AB5C7E42-583E-D5F6-C89F-F7402D56CCB6
+2026-04-28T10:18:27: Client auto-AB5C7E42-583E-D5F6-C89F-F7402D56CCB6 [172.18.0.5:46681] disconnected.
+2026-04-28T10:18:43: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:18:43: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:18:43: New connection from 172.18.0.5:59909 on port 1883.
+2026-04-28T10:18:43: New client connected from 172.18.0.5:59909 as auto-A20E2183-6025-1073-37EA-C813E574FDFC (p4, c1, k60, u'gateway').
+2026-04-28T10:18:43: No will message specified.
+2026-04-28T10:18:43: Sending CONNACK to auto-A20E2183-6025-1073-37EA-C813E574FDFC (0, 0)
+2026-04-28T10:18:43: Received PUBLISH from auto-A20E2183-6025-1073-37EA-C813E574FDFC (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:18:43: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:18:43: Received DISCONNECT from auto-A20E2183-6025-1073-37EA-C813E574FDFC
+2026-04-28T10:18:43: Client auto-A20E2183-6025-1073-37EA-C813E574FDFC [172.18.0.5:59909] disconnected.
+2026-04-28T10:18:47: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:18:47: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:18:48: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:48: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:48: New connection from 172.18.0.5:43219 on port 1883.
+2026-04-28T10:18:48: New client connected from 172.18.0.5:43219 as auto-E72BA880-E906-CDDE-B77C-5B9100D6086D (p4, c1, k60, u'gateway').
+2026-04-28T10:18:48: No will message specified.
+2026-04-28T10:18:48: Sending CONNACK to auto-E72BA880-E906-CDDE-B77C-5B9100D6086D (0, 0)
+2026-04-28T10:18:48: Received PUBLISH from auto-E72BA880-E906-CDDE-B77C-5B9100D6086D (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:48: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:48: Received DISCONNECT from auto-E72BA880-E906-CDDE-B77C-5B9100D6086D
+2026-04-28T10:18:48: Client auto-E72BA880-E906-CDDE-B77C-5B9100D6086D [172.18.0.5:43219] disconnected.
+2026-04-28T10:18:56: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:56: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:18:56: New connection from 172.18.0.5:57159 on port 1883.
+2026-04-28T10:18:56: New client connected from 172.18.0.5:57159 as auto-3A18EAC3-8CC7-CAC7-F69B-F4C588D9BEF5 (p4, c1, k60, u'gateway').
+2026-04-28T10:18:56: No will message specified.
+2026-04-28T10:18:56: Sending CONNACK to auto-3A18EAC3-8CC7-CAC7-F69B-F4C588D9BEF5 (0, 0)
+2026-04-28T10:18:56: Received PUBLISH from auto-3A18EAC3-8CC7-CAC7-F69B-F4C588D9BEF5 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:56: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:18:56: Received DISCONNECT from auto-3A18EAC3-8CC7-CAC7-F69B-F4C588D9BEF5
+2026-04-28T10:18:56: Client auto-3A18EAC3-8CC7-CAC7-F69B-F4C588D9BEF5 [172.18.0.5:57159] disconnected.
+2026-04-28T10:19:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:19:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:19:47: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:19:47: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:20:06: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:20:06: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (455 bytes))
+2026-04-28T10:20:06: New connection from 172.18.0.5:54007 on port 1883.
+2026-04-28T10:20:06: New client connected from 172.18.0.5:54007 as auto-D7E0C645-90EC-750E-13CF-CA2BE1CCDB8A (p4, c1, k60, u'gateway').
+2026-04-28T10:20:06: No will message specified.
+2026-04-28T10:20:06: Sending CONNACK to auto-D7E0C645-90EC-750E-13CF-CA2BE1CCDB8A (0, 0)
+2026-04-28T10:20:06: Received PUBLISH from auto-D7E0C645-90EC-750E-13CF-CA2BE1CCDB8A (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:20:06: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (325 bytes))
+2026-04-28T10:20:06: Received DISCONNECT from auto-D7E0C645-90EC-750E-13CF-CA2BE1CCDB8A
+2026-04-28T10:20:06: Client auto-D7E0C645-90EC-750E-13CF-CA2BE1CCDB8A [172.18.0.5:54007] disconnected.
+2026-04-28T10:20:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:20:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:20:11: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:20:11: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:20:11: New connection from 172.18.0.5:42815 on port 1883.
+2026-04-28T10:20:11: New client connected from 172.18.0.5:42815 as auto-FA6CCEC4-E583-8025-D0AE-5A234C51DC42 (p4, c1, k60, u'gateway').
+2026-04-28T10:20:11: No will message specified.
+2026-04-28T10:20:11: Sending CONNACK to auto-FA6CCEC4-E583-8025-D0AE-5A234C51DC42 (0, 0)
+2026-04-28T10:20:11: Received PUBLISH from auto-FA6CCEC4-E583-8025-D0AE-5A234C51DC42 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:20:11: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:20:11: Received DISCONNECT from auto-FA6CCEC4-E583-8025-D0AE-5A234C51DC42
+2026-04-28T10:20:11: Client auto-FA6CCEC4-E583-8025-D0AE-5A234C51DC42 [172.18.0.5:42815] disconnected.
+2026-04-28T10:20:20: Received PUBLISH from hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:20:20: Sending PUBLISH to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95 (d0, q0, r0, m0, 'iot/v1/command/device/DEVCEC16BDA', ... (457 bytes))
+2026-04-28T10:20:20: New connection from 172.18.0.5:34117 on port 1883.
+2026-04-28T10:20:20: New client connected from 172.18.0.5:34117 as auto-4C4A9CBD-9767-4ABF-5361-046644113A93 (p4, c1, k60, u'gateway').
+2026-04-28T10:20:20: No will message specified.
+2026-04-28T10:20:20: Sending CONNACK to auto-4C4A9CBD-9767-4ABF-5361-046644113A93 (0, 0)
+2026-04-28T10:20:20: Received PUBLISH from auto-4C4A9CBD-9767-4ABF-5361-046644113A93 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:20:20: Sending PUBLISH to hmi_terminal_01 (d0, q0, r0, m0, 'iot/v1/command-result/device/DEVCEC16BDA', ... (326 bytes))
+2026-04-28T10:20:20: Received DISCONNECT from auto-4C4A9CBD-9767-4ABF-5361-046644113A93
+2026-04-28T10:20:20: Client auto-4C4A9CBD-9767-4ABF-5361-046644113A93 [172.18.0.5:34117] disconnected.
+2026-04-28T10:20:48: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:20:48: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:21:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:21:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:21:48: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:21:48: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:22:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:22:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:22:48: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:22:48: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:23:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:23:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:23:48: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:23:48: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:24:07: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:24:07: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:24:48: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:24:48: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:25:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:25:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:25:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:25:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:26:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:26:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:26:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:26:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:27:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:27:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:27:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:27:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:28:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:28:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:28:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:28:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:29:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:29:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:29:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:29:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:30:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:30:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:30:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:30:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:31:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:31:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:31:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:31:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:32:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:32:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:32:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:32:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:33:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:33:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:33:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:33:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:34:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:34:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:34:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:34:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:35:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:35:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:35:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:35:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:36:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:36:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:36:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:36:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:37:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:37:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:37:42: Saving in-memory database to /mosquitto/data//mosquitto.db.
+2026-04-28T10:37:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:37:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:38:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:38:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:38:49: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:38:49: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:39:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:39:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:39:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:39:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:40:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:40:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:40:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:40:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:41:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:41:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:41:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:41:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:42:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:42:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:42:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:42:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:43:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:43:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:43:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:43:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:44:08: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:44:08: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:44:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:44:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:45:09: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:45:09: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:45:50: Received PINGREQ from hmi_terminal_01
+2026-04-28T10:45:50: Sending PINGRESP to hmi_terminal_01
+2026-04-28T10:46:09: Received PINGREQ from auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95
+2026-04-28T10:46:09: Sending PINGRESP to auto-2D3586CA-BA24-D75F-3E22-A35B604FCE95

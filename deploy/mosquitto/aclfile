@@ -1,0 +1,11 @@
+user gateway
+topic readwrite telemetry/plc/#
+topic readwrite event/plc/#
+topic readwrite gateway/status
+topic read command/plc/#
+
+user hmi
+topic read telemetry/plc/#
+topic read event/plc/#
+topic read gateway/status
+topic write command/plc/#

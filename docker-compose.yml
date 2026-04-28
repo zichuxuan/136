@@ -1,0 +1,94 @@
+services:
+  mysql:
+    image: mysql:8.0
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb-buffer-pool-size=1G
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: iot_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./middleware/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - iot-net
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "3"
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./deploy/redis/redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - ./data/redis:/data
+    networks:
+      - iot-net
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "3"
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./deploy/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./deploy/mosquitto/aclfile:/mosquitto/config/aclfile:ro
+      - ./deploy/mosquitto/passwordfile:/mosquitto/config/passwordfile:ro
+      - ./data/mosquitto:/mosquitto/data
+    networks:
+      - iot-net
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "3"
+
+  gateway:
+    build:
+      context: ./middleware
+    ports:
+      - "8000:8000"
+    environment:
+      MYSQL_URL: mysql+aiomysql://root:rootpassword@mysql:3306/iot_db
+      REDIS_URL: redis://redis:6379/0
+      MQTT_HOST: mosquitto
+      MQTT_PORT: 1883
+      MQTT_USERNAME: gateway
+      MQTT_PASSWORD: gatewaypassword
+      API_TOKEN: changeme
+    depends_on:
+      - mysql
+      - redis
+      - mosquitto
+    networks:
+      - iot-net
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz').read()\""]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "3"
+
+networks:
+  iot-net:
+    driver: bridge

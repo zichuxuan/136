@@ -1,0 +1,70 @@
+graph TD
+    %% 终端层
+    subgraph Terminal_Layer [智能终端层 HMI]
+        HMI[PyQt6 终端程序<br/>厚客户端 / 核心业务逻辑]
+        subgraph MVVM [MVVM 架构]
+            UI[Views / UI]
+            VM[ViewModels]
+            Network[Network Layer<br/>HTTP & MQTT]
+            UI <-->|双向绑定| VM
+            VM <--> Network
+        end
+        HMI --- MVVM
+    end
+
+    %% 消息中间件层
+    subgraph Message_Bus [消息总线]
+        MQTT_Broker((MQTT Broker<br/>Mosquitto / EMQX))
+    end
+
+    %% 网关层
+    subgraph Gateway_Layer [边缘中间件层 Gateway]
+        Gateway[FastAPI 网关程序<br/>数据路由与持久化]
+        subgraph Modules [网关内部模块]
+            API[RESTful API 服务]
+            MQTT_Client[MQTT 客户端]
+            Modbus_Driver[Modbus TCP 驱动]
+            ORM[SQLAlchemy / MySQL 驱动]
+            Cache_Client[Redis 缓存客户端]
+        end
+        Gateway --- Modules
+    end
+
+    %% 数据持久层
+    subgraph Data_Layer [数据与缓存层]
+        MySQL[(MySQL 8.0<br/>历史/业务数据/设备注册)]
+        Redis[(Redis<br/>实时快照/缓冲队列)]
+    end
+
+    %% 物理设备层
+    subgraph Device_Layer [底层硬件设备]
+        PLC1[PLC 设备 01<br/>Modbus TCP]
+        PLC2[PLC 设备 02<br/>Modbus TCP]
+    end
+
+    %% ====== 核心数据流向连线 ======
+
+    %% 终端与网关 API 的交互 (业务流)
+    Network <==>|1. HTTP 读写: 查询历史、设备注册、业务配置| API
+    API <==>|读取/写入| ORM
+    ORM <==>|持久化存储| MySQL
+
+    %% 终端与 MQTT 的交互 (实时数据与指令流)
+    Network -.->|2. MQTT 发布: 下发控制指令| MQTT_Broker
+    MQTT_Broker -.->|接收指令| MQTT_Client
+    
+    MQTT_Client -.->|3. MQTT 发布: 实时遥测状态推送| MQTT_Broker
+    MQTT_Broker -.->|接收推送| Network
+
+    %% 网关内部逻辑与底层通信
+    MQTT_Client ==>|触发写操作| Modbus_Driver
+    Modbus_Driver ==>|高频轮询读取| PLC1
+    Modbus_Driver ==>|高频轮询读取| PLC2
+    Modbus_Driver ==>|写入控制指令| PLC1
+    Modbus_Driver ==>|写入控制指令| PLC2
+
+    %% 缓存与缓冲流
+    Modbus_Driver ==>|刷新最新状态| Cache_Client
+    Cache_Client <==>|读写| Redis
+    API <==>|读取快照数据| Cache_Client
+    Redis -.->|后台定时批量落库| MySQL

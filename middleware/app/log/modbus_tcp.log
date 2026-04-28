@@ -1,0 +1,176 @@
+2026-04-28 10:03:40 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:03:40 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:03:40 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:03:40 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:03:40 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:03:40 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:03:40 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:03:40 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:03:40 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:03:40 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:03:40 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:08:25 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:08:25 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:08:25 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:08:25 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:08:25 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:08:25 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:25 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:08:25 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:25 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:08:25 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:08:25 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:08:49 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:08:49 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:08:49 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:08:49 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:08:49 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:08:49 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:49 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:08:49 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:49 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:08:49 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:08:49 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:08:59 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:08:59 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:08:59 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:08:59 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:08:59 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:08:59 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:59 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:08:59 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:08:59 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:08:59 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:08:59 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:15:40 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:15:40 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:15:40 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:15:40 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:15:40 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:15:40 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:15:40 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:15:40 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:15:40 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:15:40 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:15:40 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:15:46 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:15:46 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:15:46 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:15:46 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:15:46 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:15:46 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:15:46 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:15:46 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:15:46 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:15:46 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:15:46 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:15:52 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:15:52 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:15:52 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:15:52 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:15:52 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:15:53 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:15:53 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:15:53 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:15:53 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:15:53 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:15:53 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:15:56 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:15:56 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:15:56 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:15:56 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:15:56 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:15:56 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:15:56 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:15:56 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:15:56 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:15:56 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:15:56 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:18:22 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:18:22 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:18:22 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:18:22 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:18:22 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:18:22 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:18:22 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:18:22 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:18:22 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:18:22 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:18:22 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:18:27 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:18:27 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:18:27 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:18:27 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:18:27 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:18:27 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:27 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:18:27 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:27 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:18:27 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:18:27 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:18:43 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:18:43 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:18:43 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:18:43 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:18:43 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:18:43 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:18:43 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:18:43 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:18:43 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:18:43 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:18:43 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:18:48 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:18:48 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:18:48 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:18:48 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:18:48 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:18:48 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:48 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:18:48 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:48 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:18:48 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:18:48 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:18:56 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:18:56 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:18:56 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:18:56 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:18:56 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:18:56 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:56 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:18:56 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:18:56 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:18:56 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:18:56 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:20:06 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:20:06 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=1
+2026-04-28 10:20:06 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:20:06 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:20:06 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:20:06 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:20:06 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0 old_data:  addr=None
+2026-04-28 10:20:06 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+2026-04-28 10:20:06 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[True], registers=[], status=1) 
+2026-04-28 10:20:06 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:20:06 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[True], registers=[], status=1)
+2026-04-28 10:20:11 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:20:11 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:20:11 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:20:11 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:20:11 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:20:11 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:20:11 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:20:11 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:20:11 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:20:11 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:20:11 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 10:20:20 DEBUG modbus_tcp attempt 1/3
+2026-04-28 10:20:20 DEBUG modbus_tcp execute start host=192.168.1.22 port=5020 unit_id=1 function_code=0x05 offset=0 data=0
+2026-04-28 10:20:20 DEBUG pymodbus.logging Connecting to 192.168.1.22:5020.
+2026-04-28 10:20:20 DEBUG pymodbus.logging Connecting comm
+2026-04-28 10:20:20 DEBUG pymodbus.logging Connected to comm
+2026-04-28 10:20:20 DEBUG pymodbus.logging send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:20:20 DEBUG pymodbus.logging recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0 old_data:  addr=None
+2026-04-28 10:20:20 DEBUG pymodbus.logging Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0x0 0x0
+2026-04-28 10:20:20 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
+2026-04-28 10:20:20 DEBUG pymodbus.logging Frame advanced, resetting header!!
+2026-04-28 10:20:20 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
