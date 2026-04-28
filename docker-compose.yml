@@ -71,6 +71,11 @@ services:
       MQTT_USERNAME: gateway
       MQTT_PASSWORD: gatewaypassword
       API_TOKEN: changeme
+      PLC_POLL_ENABLED: "true"
+      PLC_POLL_DEFAULT_INTERVAL_S: "2"
+      PLC_POLL_MAX_INFLIGHT: "10"
+      PLC_POLL_TIMEOUT_S: "1"
+      PLC_POLL_DB_REFRESH_S: "30"
     depends_on:
       - mysql
       - redis

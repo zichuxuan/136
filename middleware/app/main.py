@@ -5,6 +5,7 @@ from sqlalchemy import text
 from app.api.router import router
 from app.core.db import engine
 from app.core.mqtt_client import mqtt_client
+from app.services.plc_polling_service import plc_polling_service
 from app.services.telemetry_service import TelemetryService
 from app.services.command_service import CommandService
 
@@ -19,9 +20,11 @@ async def lifespan(app: FastAPI):
     mqtt_client.subscribe("iot/v1/command/device/+", CommandService.process_command)
 
     await mqtt_client.connect()
+    await plc_polling_service.start()
 
     yield
 
+    await plc_polling_service.stop()
     await mqtt_client.disconnect()
     await engine.dispose()
 
