@@ -1,6 +1,10 @@
 import asyncio
 import logging
 import os
+import time
+import weakref
+from dataclasses import dataclass
+from asyncio import AbstractEventLoop
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Any
@@ -8,11 +12,83 @@ from typing import Any
 from pymodbus.client import AsyncModbusTcpClient
 
 
+@dataclass
+class _PooledModbusClient:
+    client: AsyncModbusTcpClient
+    lock: asyncio.Lock
+    last_used: float
+
+
+@dataclass
+class _LoopClientState:
+    pool_lock: asyncio.Lock
+    pool: dict[tuple[str, int], _PooledModbusClient]
+
+
 class ModbusService:
     _SUPPORTED_FUNCTION_CODES = {"0x05", "0x06", "0x10"}
     _READ_FUNCTION_CODES = {"0x01", "0x02", "0x03", "0x04"}
     _MAX_RETRIES = 3
     _logger: logging.Logger | None = None
+    _CLIENT_IDLE_TTL_S = 60.0
+    _loop_state: "weakref.WeakKeyDictionary[AbstractEventLoop, _LoopClientState]" = (
+        weakref.WeakKeyDictionary()
+    )
+
+    @staticmethod
+    def _get_loop_state() -> _LoopClientState:
+        loop = asyncio.get_running_loop()
+        state = ModbusService._loop_state.get(loop)
+        if state is None:
+            state = _LoopClientState(pool_lock=asyncio.Lock(), pool={})
+            ModbusService._loop_state[loop] = state
+        return state
+
+    @staticmethod
+    async def _get_pooled_client(host: str, port: int) -> _PooledModbusClient:
+        state = ModbusService._get_loop_state()
+        now = time.monotonic()
+        key = (host, port)
+
+        to_close: list[_PooledModbusClient] = []
+        async with state.pool_lock:
+            slot = state.pool.get(key)
+            if slot is None:
+                slot = _PooledModbusClient(
+                    client=AsyncModbusTcpClient(host=host, port=port),
+                    lock=asyncio.Lock(),
+                    last_used=now,
+                )
+                state.pool[key] = slot
+            else:
+                slot.last_used = now
+
+            for k, s in list(state.pool.items()):
+                if k == key:
+                    continue
+                if now - s.last_used > ModbusService._CLIENT_IDLE_TTL_S:
+                    state.pool.pop(k, None)
+                    to_close.append(s)
+
+        for s in to_close:
+            s.client.close()
+
+        return slot
+
+    @staticmethod
+    async def _invalidate_pooled_client(host: str, port: int, slot: _PooledModbusClient) -> None:
+        state = ModbusService._get_loop_state()
+        key = (host, port)
+
+        should_close = False
+        async with state.pool_lock:
+            current = state.pool.get(key)
+            if current is slot:
+                state.pool.pop(key, None)
+                should_close = True
+
+        if should_close:
+            slot.client.close()
 
     @staticmethod
     def _get_logger() -> logging.Logger:
@@ -180,25 +256,26 @@ class ModbusService:
             count,
         )
 
-        client = AsyncModbusTcpClient(host=host, port=port)
+        slot = await ModbusService._get_pooled_client(host, port)
         try:
             async def _do_read():
-                connected = await client.connect()
-                if not connected:
-                    raise ConnectionError(f"Failed to connect Modbus TCP {host}:{port}")
+                async with slot.lock:
+                    connected = await slot.client.connect()
+                    if not connected:
+                        raise ConnectionError(f"Failed to connect Modbus TCP {host}:{port}")
 
-                if function_code == "0x01":
-                    resp = await client.read_coils(offset, count, slave=unit_id)
-                elif function_code == "0x02":
-                    resp = await client.read_discrete_inputs(offset, count, slave=unit_id)
-                elif function_code == "0x03":
-                    resp = await client.read_holding_registers(offset, count, slave=unit_id)
-                else:
-                    resp = await client.read_input_registers(offset, count, slave=unit_id)
+                    if function_code == "0x01":
+                        resp = await slot.client.read_coils(offset, count, slave=unit_id)
+                    elif function_code == "0x02":
+                        resp = await slot.client.read_discrete_inputs(offset, count, slave=unit_id)
+                    elif function_code == "0x03":
+                        resp = await slot.client.read_holding_registers(offset, count, slave=unit_id)
+                    else:
+                        resp = await slot.client.read_input_registers(offset, count, slave=unit_id)
 
-                if resp.isError():
-                    raise RuntimeError(f"Modbus read failed: {resp}")
-                return resp
+                    if resp.isError():
+                        raise RuntimeError(f"Modbus read failed: {resp}")
+                    return resp
 
             resp = await asyncio.wait_for(_do_read(), timeout=timeout_s) if timeout_s else await _do_read()
             values: list[Any]
@@ -216,10 +293,9 @@ class ModbusService:
             logger.debug("read success result=%s", result)
             return result
         except Exception as exc:  # noqa: BLE001
+            await ModbusService._invalidate_pooled_client(host, port, slot)
             logger.exception("read failed: %s", exc)
             raise
-        finally:
-            client.close()
 
     @staticmethod
     async def execute_read(params: dict[str, Any], timeout_s: float | None = None) -> dict[str, Any]:
