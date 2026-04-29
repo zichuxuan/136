@@ -1,0 +1,5 @@
+2026-04-28 12:37:26 INFO plc_polling polling started
+2026-04-28 12:40:16 ERROR plc_polling poll failed device_code=DEV-002 error=modbus error
+2026-04-29 01:23:57 INFO plc_polling polling stopped
+2026-04-29 01:24:02 INFO plc_polling polling started
+2026-04-29 01:24:07 INFO plc_polling polling started

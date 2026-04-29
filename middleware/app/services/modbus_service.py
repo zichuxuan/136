@@ -10,6 +10,7 @@ from pymodbus.client import AsyncModbusTcpClient
 
 class ModbusService:
     _SUPPORTED_FUNCTION_CODES = {"0x05", "0x06", "0x10"}
+    _READ_FUNCTION_CODES = {"0x01", "0x02", "0x03", "0x04"}
     _MAX_RETRIES = 3
     _logger: logging.Logger | None = None
 
@@ -150,3 +151,87 @@ class ModbusService:
                     await asyncio.sleep(0.2)
         logger.error("all retries failed: %s", last_error)
         raise RuntimeError(f"Modbus write failed after 3 retries: {last_error}")
+
+    @staticmethod
+    async def _single_read(params: dict[str, Any], timeout_s: float | None) -> dict[str, Any]:
+        logger = ModbusService._get_logger()
+        host, port, unit_id = ModbusService._parse_connection(params)
+        function_code = ModbusService._normalize_function_code(params.get("function_code"))
+        offset = int(params.get("offset", 0))
+        count_raw = params.get("count", None)
+        if count_raw is None:
+            count_raw = params.get("data", None)
+        if count_raw is None:
+            raise ValueError("Missing required Modbus read field: count")
+        count = int(count_raw)
+
+        if function_code not in ModbusService._READ_FUNCTION_CODES:
+            raise ValueError(
+                "Unsupported function_code. Allowed read values: 0x01, 0x02, 0x03, 0x04"
+            )
+
+        logger.debug(
+            "read start host=%s port=%s unit_id=%s function_code=%s offset=%s count=%s",
+            host,
+            port,
+            unit_id,
+            function_code,
+            offset,
+            count,
+        )
+
+        client = AsyncModbusTcpClient(host=host, port=port)
+        try:
+            async def _do_read():
+                connected = await client.connect()
+                if not connected:
+                    raise ConnectionError(f"Failed to connect Modbus TCP {host}:{port}")
+
+                if function_code == "0x01":
+                    resp = await client.read_coils(offset, count, slave=unit_id)
+                elif function_code == "0x02":
+                    resp = await client.read_discrete_inputs(offset, count, slave=unit_id)
+                elif function_code == "0x03":
+                    resp = await client.read_holding_registers(offset, count, slave=unit_id)
+                else:
+                    resp = await client.read_input_registers(offset, count, slave=unit_id)
+
+                if resp.isError():
+                    raise RuntimeError(f"Modbus read failed: {resp}")
+                return resp
+
+            resp = await asyncio.wait_for(_do_read(), timeout=timeout_s) if timeout_s else await _do_read()
+            values: list[Any]
+            if function_code in {"0x01", "0x02"}:
+                values = list(getattr(resp, "bits", []) or [])
+            else:
+                values = list(getattr(resp, "registers", []) or [])
+
+            result = {
+                "function_code": function_code,
+                "offset": offset,
+                "count": count,
+                "values": values,
+            }
+            logger.debug("read success result=%s", result)
+            return result
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("read failed: %s", exc)
+            raise
+        finally:
+            client.close()
+
+    @staticmethod
+    async def execute_read(params: dict[str, Any], timeout_s: float | None = None) -> dict[str, Any]:
+        logger = ModbusService._get_logger()
+        last_error: Exception | None = None
+        for attempt in range(1, ModbusService._MAX_RETRIES + 1):
+            try:
+                logger.debug("read attempt %s/%s", attempt, ModbusService._MAX_RETRIES)
+                return await ModbusService._single_read(params, timeout_s=timeout_s)
+            except Exception as exc:  # noqa: BLE001
+                last_error = exc
+                if attempt < ModbusService._MAX_RETRIES:
+                    await asyncio.sleep(0.2)
+        logger.error("read all retries failed: %s", last_error)
+        raise RuntimeError(f"Modbus read failed after 3 retries: {last_error}")

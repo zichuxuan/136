@@ -174,3 +174,11 @@
 2026-04-28 10:20:20 DEBUG pymodbus.logging decoded PDU function_code(5 sub -1) -> WriteSingleCoilResponse(dev_id=0, transaction_id=0, address=0, count=0, bits=[False], registers=[], status=1) 
 2026-04-28 10:20:20 DEBUG pymodbus.logging Frame advanced, resetting header!!
 2026-04-28 10:20:20 DEBUG modbus_tcp execute success response=WriteSingleCoilResponse(dev_id=1, transaction_id=1, address=0, count=0, bits=[False], registers=[], status=1)
+2026-04-28 12:40:15 DEBUG modbus_tcp attempt 1/3
+2026-04-28 12:40:15 DEBUG modbus_tcp attempt 2/3
+2026-04-28 12:40:15 DEBUG modbus_tcp attempt 3/3
+2026-04-28 12:40:15 ERROR modbus_tcp all retries failed: write failed
+2026-04-28 12:40:47 DEBUG modbus_tcp attempt 1/3
+2026-04-28 12:40:47 DEBUG modbus_tcp attempt 2/3
+2026-04-28 12:40:47 DEBUG modbus_tcp attempt 3/3
+2026-04-28 12:40:47 ERROR modbus_tcp all retries failed: write failed

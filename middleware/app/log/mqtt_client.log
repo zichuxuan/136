@@ -30,3 +30,35 @@
 2026-04-28 10:20:11 DEBUG mqtt_client Published topic=iot/v1/command-result/device/DEVCEC16BDA qos=0 payload={"command_id": "cmd-beb7fb10949c4ded80d3d321f5d5e844", "batch_id": "batch-5ada30e60dc84b2f8854bb344dbbf52a", "device_code": "DEVCEC16BDA", "command_type": "STOP", "result_code": "EXECUTED", "result_message": "write success", "stage": "executed", "ts": "2026-04-28T10:20:11.163571Z", "source": {"client_id": "hmi_terminal_01"}}
 2026-04-28 10:20:20 DEBUG mqtt_client Received topic=iot/v1/command/device/DEVCEC16BDA payload=b'{"command_id": "cmd-1c814244bcf34387ab698bb24c1b1fa7", "device_code": "DEVCEC16BDA", "action_name": "stop", "command_type": "STOP", "params": {"data": 0, "offset": 0, "description": "", "function_code": "5", "point_address": "1", "host": "192.168.1.22", "port": 5020, "connection": {"host": "192.168.1.22", "port": 5020}}, "ts": "2026-04-28T10:20:20.518922Z", "source": {"client_id": "hmi_terminal_01"}, "batch_id": "batch-a358a8246eaa4ef9821aad0cdb608d18"}'
 2026-04-28 10:20:20 DEBUG mqtt_client Published topic=iot/v1/command-result/device/DEVCEC16BDA qos=0 payload={"command_id": "cmd-1c814244bcf34387ab698bb24c1b1fa7", "batch_id": "batch-a358a8246eaa4ef9821aad0cdb608d18", "device_code": "DEVCEC16BDA", "command_type": "STOP", "result_code": "EXECUTED", "result_message": "write success", "stage": "executed", "ts": "2026-04-28T10:20:20.644715Z", "source": {"client_id": "hmi_terminal_01"}}
+2026-04-28 12:36:01 INFO mqtt_client MQTT disconnected
+2026-04-28 12:36:06 INFO mqtt_client Registered handler for topic=telemetry/plc/+
+2026-04-28 12:36:06 INFO mqtt_client Registered handler for topic=event/plc/+
+2026-04-28 12:36:06 INFO mqtt_client Registered handler for topic=iot/v1/command/device/+
+2026-04-28 12:36:06 INFO mqtt_client MQTT client created host=mosquitto port=1883 username=gateway
+2026-04-28 12:36:06 INFO mqtt_client Subscribed topic=telemetry/plc/+
+2026-04-28 12:36:06 INFO mqtt_client Subscribed topic=event/plc/+
+2026-04-28 12:36:06 INFO mqtt_client Subscribed topic=iot/v1/command/device/+
+2026-04-28 12:37:07 INFO mqtt_client MQTT disconnected
+2026-04-28 12:37:11 INFO mqtt_client Registered handler for topic=telemetry/plc/+
+2026-04-28 12:37:11 INFO mqtt_client Registered handler for topic=event/plc/+
+2026-04-28 12:37:11 INFO mqtt_client Registered handler for topic=iot/v1/command/device/+
+2026-04-28 12:37:11 INFO mqtt_client MQTT client created host=mosquitto port=1883 username=gateway
+2026-04-28 12:37:26 INFO mqtt_client Registered handler for topic=telemetry/plc/+
+2026-04-28 12:37:26 INFO mqtt_client Registered handler for topic=event/plc/+
+2026-04-28 12:37:26 INFO mqtt_client Registered handler for topic=iot/v1/command/device/+
+2026-04-28 12:37:26 INFO mqtt_client MQTT client created host=mosquitto port=1883 username=gateway
+2026-04-28 12:37:26 INFO mqtt_client Subscribed topic=telemetry/plc/+
+2026-04-28 12:37:26 INFO mqtt_client Subscribed topic=event/plc/+
+2026-04-28 12:37:26 INFO mqtt_client Subscribed topic=iot/v1/command/device/+
+2026-04-29 01:23:57 INFO mqtt_client MQTT disconnected
+2026-04-29 01:24:02 INFO mqtt_client Registered handler for topic=telemetry/plc/+
+2026-04-29 01:24:02 INFO mqtt_client Registered handler for topic=event/plc/+
+2026-04-29 01:24:02 INFO mqtt_client Registered handler for topic=iot/v1/command/device/+
+2026-04-29 01:24:02 INFO mqtt_client MQTT client created host=mosquitto port=1883 username=gateway
+2026-04-29 01:24:07 INFO mqtt_client Registered handler for topic=telemetry/plc/+
+2026-04-29 01:24:07 INFO mqtt_client Registered handler for topic=event/plc/+
+2026-04-29 01:24:07 INFO mqtt_client Registered handler for topic=iot/v1/command/device/+
+2026-04-29 01:24:07 INFO mqtt_client MQTT client created host=mosquitto port=1883 username=gateway
+2026-04-29 01:24:08 INFO mqtt_client Subscribed topic=telemetry/plc/+
+2026-04-29 01:24:08 INFO mqtt_client Subscribed topic=event/plc/+
+2026-04-29 01:24:08 INFO mqtt_client Subscribed topic=iot/v1/command/device/+
